@@ -1,0 +1,102 @@
+.promo
+  padding:
+    top: 34px
+    bottom: 56px
+  position: relative
+  color: $alt-text-color
+  background: url('../img/promo-screen/bg.png') center no-repeat
+  background-size: cover
+  z-index: 0
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: -1
+  &__title
+    margin-top: 67px
+    font-size: 48px
+    font-weight: 700
+    text-align: center
+    &_subtext
+      display: block
+      font-size: 44px
+  &__subtitle
+    margin-top: 37px
+    font-size: 22px
+    font-weight: 400
+    text-align: center
+  &-form
+    margin:
+      left: auto
+      right: auto
+      top: 45px
+    position: relative
+    max-width: 954px
+    &::before, &::after
+      content: ''
+      position: absolute
+      width: 79px
+      height: 1px
+      top: 68px
+      transform: rotate(90deg)
+      background-color: rgba(255, 255, 255, 0.5)
+    &::before
+      left: -39px
+    &::after
+      right: -39px
+    &__input
+      margin-right: 9px
+      &s
+        position: relative
+        display: flex
+        justify-content: center
+        &:before, &::after
+          content: ''
+          position: absolute
+          width: 18px
+          height: 1px
+          top: 50%
+          background-color: rgba(255, 255, 255, 0.5)
+        &::before
+          left: 0
+        &:after
+          right: 0
+      width: 33%
+      max-width: 290px
+      border-radius: 30px
+      &:last-child
+        margin-right: 0
+        position: relative
+    &__button
+      margin: auto
+      margin-top: 20px
+      display: block
+      position: relative
+      &::before, &::after
+        content: ''
+        position: absolute
+        width: 327px
+        height: 1px
+        top: 50%
+        background-color: rgba(255, 255, 255, 0.5)
+      &::before
+        left: -345px
+      &::after
+        left: 280px
+    &__footnote
+      margin-top: 22px
+      text-align: center
+      font-size: 14px
+  &__scroll-btn
+    margin: 
+      top: 76px
+      right: auto
+      left: auto
+    display: block
+    width: 17px
+    height: 49px
+    cursor: pointer

@@ -1,0 +1,31 @@
+.header
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__content
+    display: flex
+  &__contacts
+    display: flex
+    flex-direction: column
+  &__placeholder
+    font-size: 12px
+    margin-bottom: 3px
+  &__phone
+    position: relative
+    font-size: 20px
+    font-weight: 700
+    color: $alt-text-color
+    transition: .2s
+    &:hover
+      color: $hover-color
+    &::before
+      content: ''
+      position: absolute
+      width: 28px
+      height: 33px
+      bottom: 5px
+      left: -30px
+      background: url('../img/svg/smartphone.svg') center no-repeat
+      background-size: cover
+      

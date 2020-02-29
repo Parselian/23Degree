@@ -1,0 +1,269 @@
+@media (max-width: 1200px)
+  .button
+    padding: 15px 35px
+  .info
+    &-block
+      &__content
+        max-width: 450px
+  .promo
+    &-form
+      &::before, &::after
+        width: 73px
+        top: 65px
+      &::before
+        left: -36px
+      &::after
+        right: -36px
+      &__input
+        &s
+          &::before, &::after
+            width: 10px
+      &__button
+        &::before
+          left: -347px
+        &::after
+          left: 255px
+  .services
+    &-block
+      &__img
+        height: auto
+        width: 450px
+      &__text
+        font-size: 14px
+  .portfolio
+    &__card
+      width: 303px
+      height: 203px
+
+@media (max-width: 993px)
+  .form
+    &__input
+      padding: 
+        top: 15px
+        bottom: 15px
+        left: 20px
+  .button
+    padding: 15px 45px
+    font-size: 18px
+  .promo
+    &__title
+      font-size: 46px
+      &_subtext
+        font-size: 42px
+    &__subtitle
+      font-size: 18px
+    &-form
+      &:before, &:after
+        width: 67px
+        top: 57px
+      &::before
+        left: -33px
+      &::after
+        right: -33px
+      &__input
+        &s
+          &:before, &::after
+            width: 20px
+        max-width: 200px
+      &__button
+        &:before, &::after
+          width: 198px
+        &::before
+          left: -222px
+        &::after
+          left: 270px
+  .services
+    &-block, &-block_reverse
+      margin-bottom: 60px
+      flex-direction: column
+      &:last-child
+        margin-bottom: 0
+      &__img
+        margin-bottom: 20px
+  .portfolio
+    &__menu
+      &-item
+        font-size: 12px
+        &_active
+          &::before
+            height: 55px
+    &__card
+      width: 341px
+      height: 241px
+
+@media (max-width: 768px)
+  .button
+    &:hover
+      color: $alt-text-color
+      background-color: $accent-color
+  .header
+    &__phone
+      font-size: 18px
+      &:hover
+        color: $alt-text-color
+  .burger
+    &-btn
+      margin-left: 40px
+  .promo
+    &__title
+      font-size: 34px
+      &_subtext
+        font-size: 32px
+    &__subtitle
+      font-size: 16px
+    &-form
+      &::before
+        left: 50%
+        width: 280px
+        top: -25px
+        transform: rotate(0) translateX(-140px)
+      &::after
+        display: none
+      &__input
+        &s
+          flex-direction: column
+          align-items: center
+          &:before, &::after
+            transform: rotate(90deg)
+            width: 237px
+            top: 93px
+            left: 100px
+          &::before
+            left: -4px
+          &::after
+            left: 276px
+        margin:
+          right: 0
+          bottom: 10px
+        width: 245px
+        max-width: 100%
+      &__button
+        &:before, &::after
+          width: 11px
+        &::before
+          left: -17px
+        &::after
+          left: 251px
+    &__scroll-btn
+      margin-top: 56px
+  .portfolio
+    &__menu
+      flex-wrap: wrap
+      &:before,&::after
+        content: ''
+        position: absolute
+        height: 1px
+        background-color: $accent-color
+      &::before
+        width: 93px
+        top: 50%
+        transform: rotate(90deg) translateY(50%)
+      &::after
+        width: calc(100% - 2px)
+        left: 1px
+        top: 50%
+      &-item
+        width: 50%
+        &::before
+          width: calc( 100% + 4px )
+          left: -2px
+        &:after 
+          display: none
+        &:first-child
+          &::before
+            border-bottom-left-radius: 0
+        &:nth-child(2)
+          &::before
+            border-top-right-radius: 30px
+            border-bottom-right-radius: 0
+        &:nth-child(3)
+          &::before
+            border-bottom-left-radius: 30px
+        &:last-child
+          &::before
+            border-top-right-radius: 0
+            border-bottom-right-radius: 30px
+    &__card
+      width: 251px
+      height: 151px
+
+@media (max-width: 576px)
+  .title
+    &::after
+      width: 278px
+      transform: translateX(-139px)
+  .info
+    &-block
+      &__title
+        margin-bottom: 5px
+        text-align: center
+        font-size: 24px
+      &__text
+        text-align-last: center
+      &__btn
+        margin:
+          left: auto
+          right: auto
+        display: block
+        
+  .header
+    &__contacts
+      display: none
+  .promo
+    &__title
+      font-size: 32px
+      &_subtext
+        font-size: 28px
+    &-form
+      &:before, &::after
+        display: none
+      &__input
+        &s
+          &:before, &::after
+            display: none
+      &__button
+        &:before, &::after
+          display: none
+    &__scroll-btn
+      display: none
+  .services
+    &-block
+      &__img
+        width: 100%
+  .portfolio
+    &__menu
+      flex-direction: column
+      &::before, &::after
+        display: none
+      &-item
+        padding: 10px 20px
+        width: 100%
+        &:first-child
+          padding-left: 20px
+          &::before
+            border-top-right-radius: 30px
+            border-bottom-right-radius: 0
+        &:nth-child(2)
+          &::before
+            border-radius: 0
+        &:nth-child(3)
+          &::before
+            border-radius: 0
+        &:last-child
+          padding-right: 20px
+          &::before
+            border-radius: 0
+            border-bottom-left-radius: 30px
+            border-bottom-right-radius: 30px
+        &_active
+          &::before
+            height: 40px
+    &__wrap
+      justify-content: center
+    &__card
+      width: 90%
+      height: auto
+      &:nth-last-child(-n+3)
+        margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0

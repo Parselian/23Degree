@@ -1,0 +1,77 @@
+@import 'variables.sass'
+
+body
+  font-family: 'Roboto', sans-serif
+  color: $main-text-color
+
+.title
+  position: relative
+  text-align: center
+  font-size: 36px
+  font-weight: 300
+  color: $title-color
+  &::after
+    content: ''
+    position: absolute
+    width: 378px
+    height: 1px
+    left: 50%
+    transform: translateX(-189px)
+    bottom: -22px
+    background-color: $accent-color
+
+.form
+  &__input
+    padding: 
+      top: 20px
+      bottom: 20px
+      left: 25px
+    color: $placeholder-color
+
+.button
+  padding: 20px 50px
+  font-size: 19px
+  font-weight: 700
+  color: $alt-text-color
+  background-color: $accent-color
+  border-radius: 30px
+  cursor: pointer
+  transition: .2s
+  &:hover
+    color: $accent-color
+    background-color: $hover-accent-color
+  &_hidden
+    height: 0
+    padding: 0 !important
+  
+.info
+  &-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_reverse
+      flex-direction: row-reverse
+    &__img
+      max-width: 570px
+      max-height: 320px
+    &__content
+      max-width: 535px
+    &__title
+      margin-bottom: 15px
+      font-size: 28px
+      font-weight: 300
+      color: $accent-color
+    &__text
+      text-align: justify
+      font-weight: 100
+      line-height: 24px
+    &__btn
+      margin-top: 25px
+      overflow: hidden
+
+@import 'burger.sass'
+@import 'header.sass'
+@import 'promo.sass'
+@import 'services.sass'
+@import 'portfolio.sass'
+@import 'media.sass'
