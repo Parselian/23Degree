@@ -3,7 +3,16 @@
 body
   font-family: 'Roboto', sans-serif
   color: $main-text-color
-
+html
+  ::-webkit-scrollbar
+    width: 10px
+    height: 5px
+    background-color: $scrollbar-track-color
+  ::-webkit-scrollbar-thumb
+    width: 30px
+    height: 30px
+    background-color: $accent-color
+    border-radius: 5px
 .title
   position: relative
   text-align: center
@@ -17,8 +26,12 @@ body
     height: 1px
     left: 50%
     transform: translateX(-189px)
-    bottom: -22px
+    bottom: -23px
     background-color: $accent-color
+  &_alt
+    color: $alt-text-color
+    &::after
+      background-color: $alt-text-color
 
 .form
   &__input
@@ -74,4 +87,11 @@ body
 @import 'promo.sass'
 @import 'services.sass'
 @import 'portfolio.sass'
+@import 'advantages.sass'
+@import 'process.sass'
+@import 'companies.sass'
+@import 'team.sass'
+@import 'blockquote.sass'
+@import 'blog.sass'
+@import 'contacts.sass'
 @import 'media.sass'

@@ -1,0 +1,25 @@
+.companies
+  padding: 
+    top: 50px
+    bottom: 65px
+  background-color: $alt-bg-color
+  ::-webkit-scrollbar
+    height: 5px
+    background-color: $scrollbar-track-color
+    border-radius: 5px
+  ::-webkit-scrollbar-thumb
+    width: 30px
+    height: 30px
+    background-color: $accent-color
+  &__title
+    margin-bottom: 60px
+  &__wrap
+    padding-bottom: 40px
+    display: flex
+    overflow: auto
+  &__company
+    margin-right: 40px
+    max-width: 160px
+    max-height: 100px
+    &:last-child
+      margin-right: 0

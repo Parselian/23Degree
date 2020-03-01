@@ -1,0 +1,41 @@
+.advantages
+  padding: 
+    top: 50px
+    bottom: 70px
+  background-color: $alt-bg-color
+  &__title
+    margin-bottom: 60px
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__advantage
+    &:nth-child(4), &:nth-child(6)
+      margin-right: 0
+    margin:
+      right: 20px
+      bottom: 60px
+    flex: 0 0 23%
+    text-align: center
+    &:nth-last-child(-n+2)
+      margin-bottom: 0
+    &-img
+      margin-bottom: 36px
+      width: 60px
+      height: 60px
+    &-text
+      margin: auto
+      position: relative
+      max-width: 260px
+      font-size: 14px
+      line-height: 20px
+      &::before
+        content: ''
+        position: absolute
+        display: block
+        width: 124px
+        height: 1px
+        left: 50%
+        transform: translateX(-62px)
+        top: -23px
+        background-color: $accent-color
