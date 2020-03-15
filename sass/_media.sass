@@ -1,6 +1,4 @@
 @media (max-width: 1200px)
-  .button
-    padding: 15px 35px
   .info
     &-block
       &__content
@@ -8,8 +6,8 @@
   .promo
     &-form
       &::before, &::after
-        width: 73px
-        top: 65px
+        width: 71px
+        top: 63px
       &::before
         left: -36px
       &::after
@@ -19,10 +17,14 @@
           &::before, &::after
             width: 10px
       &__button
+        padding: 15px 35px
+        font-size: 14px
+        &:before, &::after
+          width: 350px
         &::before
-          left: -347px
+          left: -369px
         &::after
-          left: 255px
+          left: 211px
   .services
     &-block
       &__img
@@ -30,6 +32,18 @@
         width: 450px
       &__text
         font-size: 14px
+  .calculator
+    &__blocks
+      width: 550px
+    &__input
+      &-label
+        padding: 16px 45px
+        &_active
+          width: 400px
+          font-size: 14px
+          top: 30px
+          transform: translateX(-200px)
+          background-size: contain
   .portfolio
     &__card
       width: 303px
@@ -44,12 +58,14 @@
     &::after
       right: -50px
   .contacts
+    &__subtitle
+      font-size: 22px
     &-form
       width: 600px
       &__input
         max-width: 195px
 
-@media (max-width: 993px)
+@media (max-width: 991px) 
   .form
     &__input
       padding: 
@@ -58,7 +74,19 @@
         left: 20px
   .button
     padding: 15px 45px
-    font-size: 18px
+    font-size: 14px
+  .burger
+    &-btn
+      &:hover
+        .burger
+          &-btn
+            &__row
+              background-color: $alt-text-color
+    &-menu
+      width: 250px
+      &__link
+        &:hover
+          background-color: transparent
   .promo
     &__title
       font-size: 46px
@@ -80,12 +108,13 @@
             width: 20px
         max-width: 200px
       &__button
+        margin-top: 22px
         &:before, &::after
-          width: 198px
+          width: 220px
         &::before
-          left: -222px
+          left: -240px
         &::after
-          left: 270px
+          left: 230px
   .services
     &-block, &-block_reverse
       margin-bottom: 60px
@@ -94,13 +123,23 @@
         margin-bottom: 0
       &__img
         margin-bottom: 20px
+  .calculator
+    &__subtitle
+      font-size: 20px
+    &__form
+      flex-direction: column
+      align-items: center
+    &__blocks
+      margin-bottom: 40px
   .portfolio
     &__menu
       &-item
         font-size: 12px
         &_active
           &::before
+            width: calc(100% + 16px)
             height: 55px
+            left: -6px
     &__card
       width: 341px
       height: 241px
@@ -133,18 +172,34 @@
       margin:
         bottom: 40px
       width: 100%
+      &__input
+        max-width: 225px
     &-list
       justify-content: center
       display: flex
       flex-wrap: wrap
       &__item
         margin-right: 20px
+        &:last-child
+          margin-bottom: 20px
+  .map
+    height: 500px
+  .footer
+    &__menu
+      &-block
+        margin-right: 40px
+    &__contacts
+      &-list
+        float: right
 
-@media (max-width: 768px)
+@media (max-width: 767px)
   .button
     &:hover
       color: $alt-text-color
       background-color: $accent-color
+  .burger
+    &-menu
+      width: 200px
   .header
     &__phone
       font-size: 18px
@@ -187,14 +242,18 @@
         width: 245px
         max-width: 100%
       &__button
+        margin-top: 23px
         &:before, &::after
           width: 11px
         &::before
-          left: -17px
+          left: -35px
         &::after
-          left: 251px
+          left: 233px
     &__scroll-btn
       margin-top: 56px
+  .calculator
+    &__blocks
+      width: 100%
   .portfolio
     &__menu
       flex-wrap: wrap
@@ -252,6 +311,23 @@
       &__img
         width: 100%
         height: 320px
+  .contacts
+    &-form
+      &__input
+        padding-left: 15px
+        max-width: 165px
+  .map
+    height: 400px
+  .footer
+    &__wrap
+      flex-direction: column
+      align-items: center
+    &__menu
+      margin-bottom: 40px
+    &__contacts
+      &-list
+        float: unset
+        justify-content: center
 
 @media (max-width: 576px)
   .title
@@ -259,7 +335,7 @@
     margin: 
       left: auto
       right: auto
-    font-size: 30px
+    font-size: 26px
     &::after
       width: 278px
       transform: translateX(-139px)
@@ -301,6 +377,52 @@
     &-block
       &__img
         width: 100%
+  .calculator
+    &__block
+      &-title
+        text-align: center
+    &__radio
+      &-wrap
+        flex-direction: column
+        align-items: center
+        &::before
+          width: 155px
+          left: 50%
+          top: 0
+          transform: rotate(90deg) translateX(50%) translateY(100px)
+      &-label
+        min-width: 80px
+        text-align: left
+        margin-left: 77px
+        &::before
+          bottom: 1px
+          left: -30px
+          transform: translatex(0)
+        &::after
+          bottom: 8px
+          left: -23px
+          transform: translateX(0)
+        &:last-child
+          margin-bottom: 0
+      &-button:checked + .calculator__radio-label
+        &:nth-child(2)
+          &::before
+            transform: translateX(-2px)
+        &:last-child
+          &::before
+            transform: translateX(-2px)
+        &::before
+          bottom: -1px
+          transform: translateX(-2px)
+    &__input
+      &-wrap
+        flex-direction: column
+        align-items: center
+      &-label
+        margin-bottom: 20px
+        width: 240px
+        &:last-child
+          margin-bottom: 0
   .portfolio
     &__menu
       flex-direction: column
@@ -402,4 +524,14 @@
         &:last-child
           display: block
           text-align: center
+  .footer
+    &__menu
+      flex-direction: column
+      justify-content: center
+      text-align: center
+      &-block
+        margin-right: 0
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
           

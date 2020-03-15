@@ -1,0 +1,49 @@
+.footer
+  padding: 
+    top: 40px
+    bottom: 50px
+  color: $alt-text-color
+  background-color: $footer-bg-color
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__menu
+    display: flex
+    max-width: 540px
+    &-block
+      margin-right: 70px
+      &:last-child
+        margin-right: 0
+    &-item
+      margin-bottom: 15px
+      display: block
+      &:last-child
+        margin-bottom: 0
+    &-link
+      color: $alt-text-color
+      transition: .2s
+      &:hover
+        color: $hover-color
+  &__contacts
+    &-title
+      margin-bottom: 10px
+      font-size: 12px
+      text-transform: uppercase
+    &-list
+      display: flex
+    &-link
+      margin-right: 7px
+      &:last-child
+        margin-right: 0
+    &-icon
+      padding: 5px
+      width: 30px
+      height: 30px
+      border: 1px solid $alt-text-color
+      border-radius: 3px
+      fill: #ffffff
+      transition: .2s
+      &:hover
+        fill: $hover-color
+        border-color: $hover-color

@@ -6,9 +6,43 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+  
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <title>23 Degree</title>
 </head>
 <body>
+
+  <nav class="burger-menu">
+    <div class="burger-menu__btn burger-btn burger-btn_active">
+      <span class="burger-btn__row"></span>
+      <span class="burger-btn__row"></span>
+      <span class="burger-btn__row"></span>
+    </div>
+    <!-- /.burger-btn -->
+
+    <div class="burger-menu__link">Главная</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Наши услуги</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Калькулятор</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Портфолио</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Преимущества</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Процесс</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Партнёры</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Команда</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Блог</div>
+    <!-- /.burger-menu__link -->
+    <div class="burger-menu__link">Контакты</div>
+    <!-- /.burger-menu__link -->
+  </nav>
+  <!-- /.burger-menu -->
 
   <section class="promo">
     <header class="header">
@@ -25,7 +59,7 @@
           </div>
           <!-- /.header__contacts -->
   
-          <div class="burger-btn">
+          <div class="header__burger-btn burger-btn">
             <span class="burger-btn__row"></span>
             <span class="burger-btn__row"></span>
             <span class="burger-btn__row"></span>
@@ -78,7 +112,7 @@
   <!-- /.promo --> 
   
   <section class="services">
-    <h2 class="services__title title title_alt">Наши услуги</h2>
+    <h2 class="services__title title">Наши услуги</h2>
     <!-- /.title title_alt -->
 
     <div class="container">
@@ -151,6 +185,127 @@
     <!-- /.container -->
   </section>
   <!-- /.services -->
+
+  <div class="calculator">
+    <h2 class="calculator__title title title_alt">Рассчитать стоимость</h2>
+    <!-- /.calculator__title title title_alt -->
+
+    <div class="calculator__subtitle container">
+      Рассчитайте предварительную стоимость разработки интерьера
+    </div>
+    <!-- /.calculator__subtitle -->
+
+    <form action="" class="calculator__form container">
+      <div class="calculator__blocks">
+        <div class="calculator__block">
+          <div class="calculator__block-title">
+            Площадь помещения:
+          </div>
+          <!-- /.calculator__block-title -->
+
+          <div class="calculator__radio-wrap">
+            <input id="square-small" type="radio" name="calculator-square" class="calculator__radio-button">
+            <label for="square-small" class="calculator__radio-label calculator__radio-label_first">
+              100м<sup>2</sup>
+            </label>
+
+            <input id="square-medium" type="radio" name="calculator-square" class="calculator__radio-button">
+            <label for="square-medium" class="calculator__radio-label">
+              10 000м<sup>2</sup>
+            </label>
+            
+            <input id="square-large" type="radio" name="calculator-square" class="calculator__radio-button">
+            <label for="square-large" class="calculator__radio-label calculator__radio-label_3">
+              250 000м<sup>2</sup>
+            </label>
+            
+            <input id="square-xl" type="radio" name="calculator-square" class="calculator__radio-button">
+            <label for="square-xl" class="calculator__radio-label calculator__radio-label_last">
+              500 000м<sup>2</sup>
+            </label>
+          </div>
+          <!-- /.calculator__radio-wrap -->
+        </div>
+        <!-- /.calculator__block -->
+        <div class="calculator__block">
+          <div class="calculator__block-title">Выберите пакет:</div>
+          <!-- /.calculator__block-title -->
+
+          <div class="calculator__input-wrap">
+            <input id="package-light" type="radio" name="calculator-package" class="calculator__input-button">
+            <label for="package-light" class="calculator__input-label">Light</label>
+
+            <input id="package-standart" type="radio" name="calculator-package" class="calculator__input-button">
+            <label for="package-standart" class="calculator__input-label">
+              Medium
+              <div class="calculator__input-label_active">
+                План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по
+                стенам, план электросетей)
+              </div>
+            </label>
+
+            <input id="package-full" type="radio" name="calculator-package" class="calculator__input-button">
+            <label for="package-full" class="calculator__input-label">
+              Full
+              <div class="calculator__input-label_active">
+                План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по
+                стенам, план электросетей)
+              </div>
+            </label>
+          </div>
+          <!-- /.calculator__input-wrap -->
+        </div>
+        <!-- /.calculator__block -->
+      </div>
+      <!-- /.calculator__blocks -->
+
+      <div class="calculator__costs">
+        <div class="calculator__cost">
+          <div class="calculator__cost-title">Площадь помещения:</div>
+          <!-- /.calculator__cost-title -->
+          <div class="calculator__cost-value">10 000м<sup>2</sup></div>
+          <!-- /.calculator__cost-value -->
+        </div>
+        <!-- /.calculator__cost -->
+        <div class="calculator__cost">
+          <div class="calculator__cost-title">
+            Средняя стоимость м<sup>2</sup>:
+          </div>
+          <!-- /.calculator__cost-title -->
+          <div class="calculator__cost-value">4 000тг.</div>
+          <!-- /.calculator__cost-value -->
+        </div>
+        <!-- /.calculator__cost -->
+        <div class="calculator__cost">
+          <div class="calculator__cost-title">
+            Средняя стоимость объекта:
+          </div>
+          <!-- /.calculator__cost-title -->
+          <div class="calculator__cost-value">400 000тг.</div>
+          <!-- /.calculator__cost-value -->
+        </div>
+        <!-- /.calculator__cost -->
+        <button class="calculator__button button">
+          Получить консультацию специалиста
+        </button>
+        <!-- /.calculator__button button -->
+        <div class="calculator__phone">
+          <div class="calculator__phone-title">
+            или позвоните нам по телефону:
+          </div>
+          <!-- /.calculator__phone-title -->
+          <a href="tel:+77273887177" class="calculator__phone-number">
+            +7 727 388 71 77
+          </a>
+          <!-- /.calculator__phone-number -->
+        </div>
+        <!-- /.calculator__phone -->
+      </div>
+      <!-- /.calculator__blocks -->
+    </form>
+    <!-- /.calculator__form -->
+  </div>
+  <!-- /.calculator -->
 
   <section class="portfolio">
     <h2 class="title">Портфолио</h2>
@@ -518,5 +673,81 @@
     <!-- /.contacts__wrap container -->
   </section>
   <!-- /.contacts -->
+
+  <section id="map" class="map"></section>
+  <!-- /.map -->
+
+  <footer class="footer">
+    <div class="footer__wrap container">
+      <ul class="footer__menu">
+        <div class="footer__menu-block">
+          <li class="footer__menu-item">
+            <a href="" class="footer__menu-link">Главная</a> <!-- /.footer__menu-link -->
+          </li>
+          <!-- /.footer__menu-item -->
+          <li class="footer__menu-item">
+            <a href="" class="footer__menu-link">Тарифы</a> <!-- /.footer__menu-link -->
+          </li>
+          <!-- /.footer__menu-item -->
+        </div>
+        <!-- /.footer__menu-block -->
+        
+        <div class="footer__menu-block">
+          <li class="footer__menu-item">
+            <a href="" class="footer__menu-link">Вопросы-ответы</a> <!-- /.footer__menu-link -->
+          </li>
+          <!-- /.footer__menu-item -->
+            <li class="footer__menu-item">
+              <a href="" class="footer__menu-link">Личный кабинет</a> <!-- /.footer__menu-link -->
+            </li>
+            <!-- /.footer__menu-item -->
+        </div>
+        <!-- /.footer__menu-block -->
+        
+        <div class="footer__menu-block">
+          <li class="footer__menu-item">
+            <a href="" class="footer__menu-link">Новости</a> <!-- /.footer__menu-link -->
+          </li>
+          <!-- /.footer__menu-item -->
+          <li class="footer__menu-item">
+            <a href="" class="footer__menu-link">Договор публичной оферты</a> <!-- /.footer__menu-link -->
+          </li>
+          <!-- /.footer__menu-item -->
+        </div>
+        <!-- /.footer__menu-block -->
+      </ul>
+      <!-- /.footer__menu -->
+
+      <div class="footer__contacts">
+        <div class="footer__contacts-title">Мы в социальных сетях:</div>
+        <!-- /.footer__contacts-title -->
+
+        <ul class="footer__contacts-list">
+          <li class="footer__contacts-link">
+            <a href="#">
+              <svg class="footer__contacts-icon">
+                <use xlink:href="./sprites/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <!-- /.footer__contacts-link -->
+          <li class="footer__contacts-link">
+            <a href="#">
+              <svg class="footer__contacts-icon">
+                <use xlink:href="./sprites/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <!-- /.footer__contacts-link -->
+        </ul>
+        <!-- /.footer__contacts-list -->
+      </div>
+      <!-- /.footer__container -->
+    </div>
+    <!-- /.footer__wrap container -->
+  </footer>
+  <!-- /.footer -->
+
+  <script src="js/script.js"></script>
 </body>
 </html>
