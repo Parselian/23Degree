@@ -778,6 +778,45 @@
   </footer>
   <!-- /.footer -->
 
+  <section class="popup hidden">
+    <form action="./server.php" method="POST" class="popup__form form">
+      <div class="popup__form-close">&times;</div>
+      <!-- /.popup__close -->
+
+      <h2 class="popup__form-title">Оставьте заявку</h2>
+      <!-- /.popup__form-title -->
+      <div class="popup__form-subtitle">
+        Мы перезвоним вам в течении 10 минут
+      </div>
+      <!-- /.popup__form-subtitle -->
+
+      <div class="popup__form-inputs">
+        <input type="text" class="popup__form-input form__input" placeholder="ваше имя" required>
+        <input type="text" class="popup__form-input form__input" placeholder="ваш email" required>
+        <input type="text" class="popup__form-input form__input" placeholder="ваш телефон" required>
+      </div>
+      <!-- /.popup__form-inputs -->
+
+      <button type="submit" class="popup__form-button button">Отправить</button>
+      <!-- /.popup__form-button button -->
+    </form>
+    <!-- /.popup__form form -->
+  </section>
+  <!-- /.popup -->
+
+  <section class="popup popup-thanks">
+    <div class="popup__wrap popup__form">
+      <div class="popup__form-close">&times;</div>
+      <!-- /.popup__form-close -->
+      <h2 class="popup__form-title popup-thanks__title">Спасибо!</h2>
+      <!-- /.popup__form-title -->
+      <button type="submit" class="popup__form-button button">Закрыть</button>
+      <!-- /.popup__form-button button -->
+    </div>
+    <!-- /.popup__wrap popup__form -->
+  </section>
+  <!-- /.popup popup-thanks -->
+
   <script src="js/script.js"></script>
   <script src="js/maskPhone.js"></script>
   <script>

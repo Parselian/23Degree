@@ -64,3 +64,5 @@
 [30-Mar-2020 20:29:44 Europe/Moscow] PHP Notice:  Undefined index: ‘REMOTE_ADDR‘ in /home/windmymind/Documents/projects/23Degree/server.php on line 3
 [30-Mar-2020 20:30:07 Europe/Moscow] PHP Warning:  Use of undefined constant ‘REMOTE_ADDR‘ - assumed '‘REMOTE_ADDR‘' (this will throw an Error in a future version of PHP) in /home/windmymind/Documents/projects/23Degree/server.php on line 3
 [30-Mar-2020 20:30:07 Europe/Moscow] PHP Notice:  Undefined index: ‘REMOTE_ADDR‘ in /home/windmymind/Documents/projects/23Degree/server.php on line 3
+[30-Mar-2020 20:47:56 Europe/Moscow] PHP Warning:  Use of undefined constant ‘REMOTE_ADDR‘ - assumed '‘REMOTE_ADDR‘' (this will throw an Error in a future version of PHP) in /home/windmymind/Documents/projects/23Degree/server.php on line 3
+[30-Mar-2020 20:47:56 Europe/Moscow] PHP Notice:  Undefined index: ‘REMOTE_ADDR‘ in /home/windmymind/Documents/projects/23Degree/server.php on line 3
