@@ -137,7 +137,7 @@
     <h2 class="services__title title">Наши услуги</h2>
     <!-- /.title title_alt -->
 
-    <div class="container">
+    <div class="services__wrap container">
       <div class="services-block info-block info-block_reverse">
         <img src="./img/services/service-1.png" alt="Дизайн интерьера" class="services-block__img info-block__img">
 
@@ -778,8 +778,8 @@
   </footer>
   <!-- /.footer -->
 
-  <section class="popup hidden">
-    <form action="./server.php" method="POST" class="popup__form form">
+  <section class="popup popup-contacts">
+    <form id="popup-form" action="./server.php" method="POST" class="popup__form form">
       <div class="popup__form-close">&times;</div>
       <!-- /.popup__close -->
 
@@ -810,7 +810,7 @@
       <!-- /.popup__form-close -->
       <h2 class="popup__form-title popup-thanks__title">Спасибо!</h2>
       <!-- /.popup__form-title -->
-      <button type="submit" class="popup__form-button button">Закрыть</button>
+      <button type="submit" class="popup__form-button popup__close-button button">Закрыть</button>
       <!-- /.popup__form-button button -->
     </div>
     <!-- /.popup__wrap popup__form -->

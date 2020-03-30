@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
       
       if (target.matches('.header__burger-btn') ) {
         burgerMenu.classList.toggle('burger-menu_active');
-        target.classList.toggle('burger-btn_active');
+        // target.classList.toggle('burger-btn_active');
       } else if( target.closest('.promo__scroll-mouse') ) {
         e.preventDefault();
         smoothScroll(target.closest('.promo__scroll-mouse').getAttribute('href'));
@@ -25,7 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
       if( target.closest('.burger-btn') ) {
         burgerMenu.classList.toggle('burger-menu_active');
-        headerBurgerBtn.classList.toggle('burger-btn_active');
+        // headerBurgerBtn.classList.toggle('burger-btn_active');
       } else if( target. matches('a') ) {
         e.preventDefault();
         smoothScroll(target.getAttribute('href'));
@@ -45,6 +45,33 @@ window.addEventListener('DOMContentLoaded', () => {
       block: 'start'
     });
   };
+
+  /* SHOW BUTTONS IN SERVICES SECTION AT PROMTING*/
+  const showServiceButtons = () => {
+    const servicesWrap = document.querySelector('.services__wrap'),
+          servicesButtons = document.querySelectorAll('.info-block__btn');
+
+    servicesWrap.addEventListener('mouseover', (e) => {
+      const target = e.target;
+
+      if( target.matches('.services-block__content') ) {
+        const servicesButton = target.querySelector('.info-block__btn');
+
+        servicesButton.classList.add('button_unrolled');
+      }
+    });
+
+    servicesWrap.addEventListener('mouseout', (e) => {
+      const target = e.target;
+
+      if ( !target.matches('.services-block__content') ) {
+        servicesButtons.forEach(item => {
+          item.classList.remove('button_unrolled');
+        });
+      }
+    });
+  };
+  showServiceButtons();
 
   /* ADDING INTERACTIVITY IN CALCULATOR */
   const interactCalc = () => {
@@ -72,12 +99,12 @@ window.addEventListener('DOMContentLoaded', () => {
         });
       };
 
-      if (target.matches('.calculator__radio-label')) {
+      if( target.matches('.calculator__radio-label') ) {
         const targetLink = target.getAttribute('for'), 
               linkedInput = document.getElementById(targetLink);
 
         squareValue.textContent = linkedInput.value;
-      } else if (target.matches('.calculator__input-label')) {
+      } else if( target.matches('.calculator__input-label') ) {
         const targetLink = target.getAttribute('for'),
               linkedInput = document.getElementById(targetLink);
         
@@ -94,6 +121,11 @@ window.addEventListener('DOMContentLoaded', () => {
             squarePrice.textContent = 1500;
             return;
         }
+      } else if( target.matches('.calculator__button') ) {
+        e.preventDefault();
+        const popup = document.querySelector('.popup-contacts');
+
+        popup.classList.add('popup_show');
       }
 
       fullPrice.textContent = squareValue.textContent * squarePrice.textContent;
@@ -146,8 +178,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const sendForm = (selector, url) => {
     const form = document.querySelector(selector),
           notification = document.createElement('div'),
-          loaderIcon = document.createElement('div');
+          loaderIcon = document.createElement('div'),
+          popupThanks = document.querySelector('.popup-thanks');
           
+    let intervalId;
+
     loaderIcon.style.cssText = `
       margin-top: 15px;
       margin-left: auto;
@@ -167,8 +202,7 @@ window.addEventListener('DOMContentLoaded', () => {
     `;
 
     const loader = () => {
-      let intervalId,
-          angleCount = 0;
+      let angleCount = 0;
 
       intervalId = setInterval(() => {
         if( angleCount >= 360 ) {
@@ -204,6 +238,7 @@ window.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify(body)
       })
       .then( response => {
+        clearInterval(intervalId);
         form.insertAdjacentElement('beforeend', notification);
         loaderIcon.remove();
 
@@ -213,13 +248,33 @@ window.addEventListener('DOMContentLoaded', () => {
           throw new Error('Error! Network status not 200');
         }
 
-        notification.textContent = 'Ваша заявка успешно отправлена!';
+        // notification.textContent = 'Ваша заявка успешно отправлена!';
+        popupThanks.classList.add('popup_show');
       })
       .catch( error => console.error(error) );
     });
   };
   sendForm('#promo-form', './server.php');
   sendForm('#contacts-form', './server.php');
+  sendForm('#popup-form', './server.php');
+
+  /* TOGGLE POPUPS */
+  const togglePopups = () => {
+    const popup = document.querySelectorAll('.popup');
+
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+
+      if (target.matches('.popup__form-close, .popup__close-button') ) {
+        popup.forEach( item => {
+          item.classList.remove('popup_show');
+        });
+      } else if( target.matches('.info-block__btn') ) {
+        popup[0].classList.add('popup_show');
+      }
+    });
+  };
+  togglePopups();
 
   /* SHOW MAP IN CONTACTS SECTION */
   const enableMap = () => {
