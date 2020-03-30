@@ -12,7 +12,7 @@
   <title>23 Degree</title>
 </head>
 <body>
-
+  
   <nav class="burger-menu">
     <div class="burger-menu__btn burger-btn burger-btn_active">
       <span class="burger-btn__row"></span>
@@ -21,30 +21,50 @@
     </div>
     <!-- /.burger-btn -->
 
-    <div class="burger-menu__link">Главная</div>
+    <div class="burger-menu__link">
+      <a href="#home">Главная</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Наши услуги</div>
+    <div class="burger-menu__link">
+      <a href="#services">Наши услуги</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Калькулятор</div>
+    <div class="burger-menu__link">
+      <a href="#calculator">Калькулятор</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Портфолио</div>
+    <div class="burger-menu__link">
+      <a href="#portfolio">Портфолио</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Преимущества</div>
+    <div class="burger-menu__link">
+      <a href="#advantages">Преимущества</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Процесс</div>
+    <div class="burger-menu__link">
+      <a href="#process">Процесс</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Партнёры</div>
+    <div class="burger-menu__link">
+      <a href="#companies">Партнёры</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Команда</div>
+    <div class="burger-menu__link">
+      <a href="#team">Команда</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Блог</div>
+    <div class="burger-menu__link">
+      <a href="#blog">Блог</a> 
+    </div>
     <!-- /.burger-menu__link -->
-    <div class="burger-menu__link">Контакты</div>
+    <div class="burger-menu__link">
+      <a href="#contacts">Контакты</a> 
+    </div>
     <!-- /.burger-menu__link -->
   </nav>
   <!-- /.burger-menu -->
 
-  <section class="promo">
+  <section id="home" class="promo">
     <header class="header">
       <div class="header__wrap container">
         <img src="./img/promo-screen/logo.png" alt="лого" class="header__logo">
@@ -89,7 +109,7 @@
         <div class="promo-form__inputs">
           <input type="text" class="promo-form__input form__input" placeholder="Ваше имя">
           <input type="text" class="promo-form__input form__input" placeholder="email">
-          <input type="text" class="promo-form__input form__input" placeholder="Номер телефона">
+          <input type="text" class="promo-form__input promo-form__phone form__input" placeholder="Номер телефона">
         </div>
         <!-- /.promo-form__inputs -->
 
@@ -105,13 +125,15 @@
       </form>
       <!-- /.promo-form form -->
 
-      <img src="./img/promo-screen/mouse.png" alt="мышь" class="promo__scroll-btn">
+      <a href="#services" class="promo__scroll-mouse">
+        <img src="./img/promo-screen/mouse.png" alt="мышь" class="promo__scroll-btn">
+      </a>
     </div>
     <!-- /.container -->
   </section>
   <!-- /.promo --> 
   
-  <section class="services">
+  <section id="services" class="services">
     <h2 class="services__title title">Наши услуги</h2>
     <!-- /.title title_alt -->
 
@@ -186,7 +208,7 @@
   </section>
   <!-- /.services -->
 
-  <div class="calculator">
+  <div id="calculator" class="calculator">
     <h2 class="calculator__title title title_alt">Рассчитать стоимость</h2>
     <!-- /.calculator__title title title_alt -->
 
@@ -204,22 +226,22 @@
           <!-- /.calculator__block-title -->
 
           <div class="calculator__radio-wrap">
-            <input id="square-small" type="radio" name="calculator-square" class="calculator__radio-button">
+            <input id="square-small" type="radio" name="calculator-square" class="calculator__radio-button" value="100">
             <label for="square-small" class="calculator__radio-label calculator__radio-label_first">
               100м<sup>2</sup>
             </label>
 
-            <input id="square-medium" type="radio" name="calculator-square" class="calculator__radio-button">
+            <input id="square-medium" type="radio" name="calculator-square" class="calculator__radio-button" value="10000">
             <label for="square-medium" class="calculator__radio-label">
               10 000м<sup>2</sup>
             </label>
             
-            <input id="square-large" type="radio" name="calculator-square" class="calculator__radio-button">
+            <input id="square-large" type="radio" name="calculator-square" class="calculator__radio-button" value="250000">
             <label for="square-large" class="calculator__radio-label calculator__radio-label_3">
               250 000м<sup>2</sup>
             </label>
             
-            <input id="square-xl" type="radio" name="calculator-square" class="calculator__radio-button">
+            <input id="square-xl" type="radio" name="calculator-square" class="calculator__radio-button" value="500000">
             <label for="square-xl" class="calculator__radio-label calculator__radio-label_last">
               500 000м<sup>2</sup>
             </label>
@@ -227,15 +249,22 @@
           <!-- /.calculator__radio-wrap -->
         </div>
         <!-- /.calculator__block -->
+
         <div class="calculator__block">
           <div class="calculator__block-title">Выберите пакет:</div>
           <!-- /.calculator__block-title -->
 
           <div class="calculator__input-wrap">
-            <input id="package-light" type="radio" name="calculator-package" class="calculator__input-button">
-            <label for="package-light" class="calculator__input-label">Light</label>
+            <input id="package-light" type="radio" name="calculator-package" class="calculator__input-button" value="light">
+            <label for="package-light" class="calculator__input-label">
+              Light
+              <div class="calculator__input-label_active">
+                План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по
+                стенам, план электросетей)
+              </div>
+            </label>
 
-            <input id="package-standart" type="radio" name="calculator-package" class="calculator__input-button">
+            <input id="package-standart" type="radio" name="calculator-package" class="calculator__input-button" value="medium">
             <label for="package-standart" class="calculator__input-label">
               Medium
               <div class="calculator__input-label_active">
@@ -244,7 +273,7 @@
               </div>
             </label>
 
-            <input id="package-full" type="radio" name="calculator-package" class="calculator__input-button">
+            <input id="package-full" type="radio" name="calculator-package" class="calculator__input-button" value="full">
             <label for="package-full" class="calculator__input-label">
               Full
               <div class="calculator__input-label_active">
@@ -263,7 +292,8 @@
         <div class="calculator__cost">
           <div class="calculator__cost-title">Площадь помещения:</div>
           <!-- /.calculator__cost-title -->
-          <div class="calculator__cost-value">10 000м<sup>2</sup></div>
+          <div class="calculator__cost-value">
+            <span>0</span>м<sup>2</sup></div>
           <!-- /.calculator__cost-value -->
         </div>
         <!-- /.calculator__cost -->
@@ -272,7 +302,7 @@
             Средняя стоимость м<sup>2</sup>:
           </div>
           <!-- /.calculator__cost-title -->
-          <div class="calculator__cost-value">4 000тг.</div>
+          <div class="calculator__cost-value"><span>0</span>тг.</div>
           <!-- /.calculator__cost-value -->
         </div>
         <!-- /.calculator__cost -->
@@ -281,7 +311,7 @@
             Средняя стоимость объекта:
           </div>
           <!-- /.calculator__cost-title -->
-          <div class="calculator__cost-value">400 000тг.</div>
+          <div class="calculator__cost-value"><span>0</span>тг.</div>
           <!-- /.calculator__cost-value -->
         </div>
         <!-- /.calculator__cost -->
@@ -307,30 +337,30 @@
   </div>
   <!-- /.calculator -->
 
-  <section class="portfolio">
+  <section id="portfolio" class="portfolio">
     <h2 class="title">Портфолио</h2>
     <!-- /.title -->
 
     <div class="container">
       <ul class="portfolio__menu">
-        <li class="portfolio__menu-item portfolio__menu-item_active">Все проекты</li>
+        <li data-active-cat="all" class="portfolio__menu-item portfolio__menu-item_active">Все проекты</li>
         <!-- /.portfolio__menu-item -->
-        <li class="portfolio__menu-item">Экстерьеры</li>
+        <li data-active-cat="exterier" class="portfolio__menu-item">Экстерьеры</li>
         <!-- /.portfolio__menu-item -->
-        <li class="portfolio__menu-item">Жилые интерьеры</li>
+        <li data-active-cat="home-interier" class="portfolio__menu-item">Жилые интерьеры</li>
         <!-- /.portfolio__menu-item -->
-        <li class="portfolio__menu-item">Общественные интерьеры</li>
+        <li data-active-cat="public-exterier" class="portfolio__menu-item">Общественные интерьеры</li>
         <!-- /.portfolio__menu-item -->
       </ul>
       <!-- /.portfolio__menu -->
 
       <div class="portfolio__wrap">
-        <img src="./img/portfolio/photo-1.png" alt="работа №1" class="portfolio__card">
-        <img src="./img/portfolio/photo-2.png" alt="работа №2" class="portfolio__card">
-        <img src="./img/portfolio/photo-3.png" alt="работа №3" class="portfolio__card">
-        <img src="./img/portfolio/photo-4.png" alt="работа №4" class="portfolio__card">
-        <img src="./img/portfolio/photo-5.png" alt="работа №5" class="portfolio__card">
-        <img src="./img/portfolio/photo-6.png" alt="работа №6" class="portfolio__card">
+        <img data-category="exterier" src="./img/portfolio/photo-1.png" alt="работа №1" class="portfolio__card">
+        <img data-category="home-interier" src="./img/portfolio/photo-2.png" alt="работа №2" class="portfolio__card">
+        <img data-category="exterier" src="./img/portfolio/photo-3.png" alt="работа №3" class="portfolio__card">
+        <img data-category="public-exterier" src="./img/portfolio/photo-4.png" alt="работа №4" class="portfolio__card">
+        <img data-category="exterier" src="./img/portfolio/photo-5.png" alt="работа №5" class="portfolio__card">
+        <img data-category="home-interier" src="./img/portfolio/photo-6.png" alt="работа №6" class="portfolio__card">
       </div>
       <!-- /.portfolio__wrap -->
     </div>
@@ -338,7 +368,7 @@
   </section>
   <!-- /.portfolio -->
 
-  <section class="advantages">
+  <section id="advantages" class="advantages">
     <h2 class="advantages__title title">Почему мы лучшие?</h2>
     <!-- /.advantages__title title -->
 
@@ -412,7 +442,7 @@
   </section>
   <!-- /.advantages -->
 
-  <section class="process">
+  <section id="process" class="process">
     <h2 class="process__title title">Процесс взаимодействия</h2>
     <!-- /.process__title title -->
     <div class="container">
@@ -449,7 +479,7 @@
   </section>
   <!-- /.process -->
 
-  <section class="companies">
+  <section id="companies" class="companies">
     <h2 class="companies__title title">Нам доверяют более 50 компаний</h2>
     <!-- /.companies__title title -->
 
@@ -483,7 +513,7 @@
   </section>
   <!-- /.companies -->
 
-  <section class="team">
+  <section id="team" class="team">
     <h2 class="team__title title">Наша команда</h2>
     <!-- /.team__title title -->
 
@@ -563,7 +593,7 @@
   </section>
   <!-- /.team -->
 
-  <section class="blog">
+  <section id="blog" class="blog">
     <h2 class="blog__title title">Блог</h2>
     <!-- /.blog__title title -->
 
@@ -590,7 +620,7 @@
   </section>
   <!-- /.blog -->
 
-  <section class="contacts">
+  <section id="contacts" class="contacts">
     <h2 class="contacts__title title title_alt">Остались вопросы?</h2>
     <!-- /.contacts__title title title_alt -->
 
@@ -749,5 +779,9 @@
   <!-- /.footer -->
 
   <script src="js/script.js"></script>
+  <script src="js/maskPhone.js"></script>
+  <script >
+    maskPhone('.promo-form__phone');
+  </script>
 </body>
 </html>
