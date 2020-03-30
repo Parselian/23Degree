@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,7 +64,7 @@
   </nav>
   <!-- /.burger-menu -->
 
-  <section id="home" class="promo">
+  <section class="promo">
     <header class="header">
       <div class="header__wrap container">
         <img src="./img/promo-screen/logo.png" alt="лого" class="header__logo">
@@ -105,11 +105,11 @@
       </h2>
       <!-- /.promo__subtitle -->
 
-      <form action="#" method="POST" class="promo-form form">
+      <form id="promo-form" action="./server.php" method="POST" class="promo-form form">
         <div class="promo-form__inputs">
-          <input type="text" class="promo-form__input form__input" placeholder="Ваше имя">
-          <input type="text" class="promo-form__input form__input" placeholder="email">
-          <input type="text" class="promo-form__input promo-form__phone form__input" placeholder="Номер телефона">
+          <input type="text" name="promo-form-name" class="promo-form__input form__input" placeholder="Ваше имя" required>
+          <input type="email" name="promo-form-email" class="promo-form__input form__input" placeholder="email" required>
+          <input type="text" name="promo-form-phone" class="promo-form__input form__input" placeholder="Номер телефона" required>
         </div>
         <!-- /.promo-form__inputs -->
 
@@ -208,7 +208,7 @@
   </section>
   <!-- /.services -->
 
-  <div id="calculator" class="calculator">
+  <section id="calculator" class="calculator">
     <h2 class="calculator__title title title_alt">Рассчитать стоимость</h2>
     <!-- /.calculator__title title title_alt -->
 
@@ -334,7 +334,7 @@
       <!-- /.calculator__blocks -->
     </form>
     <!-- /.calculator__form -->
-  </div>
+  </section>
   <!-- /.calculator -->
 
   <section id="portfolio" class="portfolio">
@@ -630,14 +630,14 @@
     <!-- /.contacts__subtitle -->
 
     <div class="contacts__wrap container">
-      <form action="#" method="POST" class="contacts-form form">
+      <form id="contacts-form" action="./server.php" method="POST" class="contacts-form form">
         <div class="contacts-form__inputs">
-          <input type="text" class="contacts-form__input form__input" placeholder="Ваше имя">
-          <input type="text" class="contacts-form__input form__input" placeholder="Ваш e-mail">
-          <input type="text" class="contacts-form__input form__input" placeholder="Ваш номер телефона">
+          <input type="text" name="contacts-form-name" class="contacts-form__input form__input" placeholder="Ваше имя" required>
+          <input type="email" name="contacts-form-email" class="contacts-form__input form__input" placeholder="Ваш e-mail" required>
+          <input type="text" name="contacts-form-phone" class="contacts-form__input contacts-form__phone form__input" placeholder="Ваш номер телефона" required>
         </div>
 
-        <textarea name="" id="" cols="30" rows="10" class="contacts-form__textarea form__textarea" placeholder="Ваше сообщение"></textarea>
+        <textarea name="client-message" cols="30" rows="10" class="contacts-form__textarea form__textarea" placeholder="Ваше сообщение"></textarea>
 
         <button class="contacts-form__button button" type="submit">Оставить зявку!</button>
         <!-- /.button -->
@@ -780,8 +780,9 @@
 
   <script src="js/script.js"></script>
   <script src="js/maskPhone.js"></script>
-  <script >
-    maskPhone('.promo-form__phone');
+  <script>
+    maskPhone('input[name="promo-form-phone"]');
+    maskPhone('input[name="contacts-form-phone"]');
   </script>
 </body>
 </html>

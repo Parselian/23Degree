@@ -8,13 +8,13 @@ window.addEventListener('DOMContentLoaded', () => {
           promoBlock = document.querySelector('.promo');
       
     promoBlock.addEventListener('click', (e) => {
-      e.preventDefault();
       const target = e.target;
-
+      
       if (target.matches('.header__burger-btn') ) {
         burgerMenu.classList.toggle('burger-menu_active');
         target.classList.toggle('burger-btn_active');
       } else if( target.closest('.promo__scroll-mouse') ) {
+        e.preventDefault();
         smoothScroll(target.closest('.promo__scroll-mouse').getAttribute('href'));
       }
     });
@@ -141,6 +141,85 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   togglePortfolio();
+
+  /* SENDING ALL FORMS ON SITE */
+  const sendForm = (selector, url) => {
+    const form = document.querySelector(selector),
+          notification = document.createElement('div'),
+          loaderIcon = document.createElement('div');
+          
+    loaderIcon.style.cssText = `
+      margin-top: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 30px;
+      height: 30px;
+      border: 2px dotted white;
+      border-radius: 15px;
+      z-index: 12;
+    `;
+
+    notification.style.cssText = `
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: lightgreen
+    `;
+
+    const loader = () => {
+      let intervalId,
+          angleCount = 0;
+
+      intervalId = setInterval(() => {
+        if( angleCount >= 360 ) {
+          angleCount = 0;
+        }
+
+        loaderIcon.style.transform = `rotate(${angleCount}deg)`;
+
+        angleCount++;
+      }, 10);
+
+      form.insertAdjacentElement('beforeend', loaderIcon);
+    };
+  
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      notification.remove();
+      loader();
+
+      const formData = new FormData(form),
+            body = {};
+        
+      formData.forEach((item, i) => {
+        body[i] = item;
+      });
+
+      return fetch( url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/JSON',
+        },
+        body: JSON.stringify(body)
+      })
+      .then( response => {
+        form.insertAdjacentElement('beforeend', notification);
+        loaderIcon.remove();
+
+        if( response.status !== 200 ) {
+          notification.textContent = 'Произошла ошибка! Попробуйте позже';
+          notification.style.color = '#fd7d7d';
+          throw new Error('Error! Network status not 200');
+        }
+
+        notification.textContent = 'Ваша заявка успешно отправлена!';
+      })
+      .catch( error => console.error(error) );
+    });
+  };
+  sendForm('#promo-form', './server.php');
+  sendForm('#contacts-form', './server.php');
 
   /* SHOW MAP IN CONTACTS SECTION */
   const enableMap = () => {
