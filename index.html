@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic" rel="stylesheet">
-  
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic" rel="onload">
+
   <title>23 Degree</title>
 </head>
 <body>
@@ -139,7 +140,7 @@
 
     <div class="services__wrap container">
       <div class="services-block info-block info-block_reverse">
-        <img src="./img/services/service-1.png" alt="Дизайн интерьера" class="services-block__img info-block__img">
+        <img src="./img/services/service-1.jpg" alt="Дизайн интерьера" class="services-block__img info-block__img">
 
         <div class="services-block__content info-block__content">
           <h3 class="services-block__title info-block__title">
@@ -161,7 +162,7 @@
       <!-- /.services-block info-block -->
 
       <div class="services-block info-block">
-        <img src="./img/services/service-2.png" alt="Дизайн экстерьера" class="services-block__img info-block__img">
+        <img src="./img/services/service-2.jpg" alt="Дизайн экстерьера" class="services-block__img info-block__img">
 
         <div class="services-block__content info-block__content">
           <h3 class="services-block__title info-block__title">
@@ -183,7 +184,7 @@
       <!-- /.services-block info-block -->
 
       <div class="services-block info-block info-block_reverse">
-        <img src="./img/services/service-3.png" alt="Визуализация" class="services-block__img info-block__img">
+        <img src="./img/services/service-3.jpg" alt="Визуализация" class="services-block__img info-block__img">
 
         <div class="services-block__content info-block__content">
           <h3 class="services-block__title info-block__title">
@@ -191,8 +192,7 @@
           </h3>
           <!-- /.services-block__title info-block__title -->
           <div class="services-block__text info-block__text">
-            Услуга, направленная на разработку дизайна прилегающих элементов зданий, а также дизайн самих зданий,
-            позволяющая обеспечить удобство людей при нахождении на территории
+            Услуга, направленная на представление будущего оформления и обстановки квартиры или дома во всех подробностях 
           </div>
           <!-- /.services-block__text info-block__text -->
           <button class="info-block__btn button">
@@ -217,7 +217,7 @@
     </div>
     <!-- /.calculator__subtitle -->
 
-    <form action="" class="calculator__form container">
+    <form action="#" class="calculator__form container">
       <div class="calculator__blocks">
         <div class="calculator__block">
           <div class="calculator__block-title">
@@ -231,19 +231,19 @@
               100м<sup>2</sup>
             </label>
 
-            <input id="square-medium" type="radio" name="calculator-square" class="calculator__radio-button" value="10000">
+            <input id="square-medium" type="radio" name="calculator-square" class="calculator__radio-button" value="600">
             <label for="square-medium" class="calculator__radio-label">
-              10 000м<sup>2</sup>
+              600м<sup>2</sup>
             </label>
             
-            <input id="square-large" type="radio" name="calculator-square" class="calculator__radio-button" value="250000">
+            <input id="square-large" type="radio" name="calculator-square" class="calculator__radio-button" value="1000">
             <label for="square-large" class="calculator__radio-label calculator__radio-label_3">
-              250 000м<sup>2</sup>
+              1 000м<sup>2</sup>
             </label>
             
-            <input id="square-xl" type="radio" name="calculator-square" class="calculator__radio-button" value="500000">
+            <input id="square-xl" type="radio" name="calculator-square" class="calculator__radio-button" value="5000">
             <label for="square-xl" class="calculator__radio-label calculator__radio-label_last">
-              500 000м<sup>2</sup>
+              5 000м<sup>2</sup>
             </label>
           </div>
           <!-- /.calculator__radio-wrap -->
@@ -258,28 +258,28 @@
             <input id="package-light" type="radio" name="calculator-package" class="calculator__input-button" value="light">
             <label for="package-light" class="calculator__input-label">
               Light
-              <div class="calculator__input-label_active">
+              <span class="calculator__input-label_active">
                 План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по
-                стенам, план электросетей)
-              </div>
+                стенам)
+              </span>
             </label>
 
             <input id="package-standart" type="radio" name="calculator-package" class="calculator__input-button" value="medium">
             <label for="package-standart" class="calculator__input-label">
               Medium
-              <div class="calculator__input-label_active">
+              <span class="calculator__input-label_active">
                 План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по
                 стенам, план электросетей)
-              </div>
+              </span>
             </label>
 
             <input id="package-full" type="radio" name="calculator-package" class="calculator__input-button" value="full">
             <label for="package-full" class="calculator__input-label">
               Full
-              <div class="calculator__input-label_active">
+              <span class="calculator__input-label_active">
                 План расстановки мебели 3D визуализация. Все рабочие чертежи (план полов, план потолка, развертки по
                 стенам, план электросетей)
-              </div>
+              </span>
             </label>
           </div>
           <!-- /.calculator__input-wrap -->
@@ -355,12 +355,12 @@
       <!-- /.portfolio__menu -->
 
       <div class="portfolio__wrap">
-        <img data-category="exterier" src="./img/portfolio/photo-1.png" alt="работа №1" class="portfolio__card">
-        <img data-category="home-interier" src="./img/portfolio/photo-2.png" alt="работа №2" class="portfolio__card">
-        <img data-category="exterier" src="./img/portfolio/photo-3.png" alt="работа №3" class="portfolio__card">
-        <img data-category="public-exterier" src="./img/portfolio/photo-4.png" alt="работа №4" class="portfolio__card">
-        <img data-category="exterier" src="./img/portfolio/photo-5.png" alt="работа №5" class="portfolio__card">
-        <img data-category="home-interier" src="./img/portfolio/photo-6.png" alt="работа №6" class="portfolio__card">
+        <img data-category="exterier" src="./img/portfolio/photo-1.jpg" alt="работа №1" class="portfolio__card">
+        <img data-category="home-interier" src="./img/portfolio/photo-2.jpg" alt="работа №2" class="portfolio__card">
+        <img data-category="exterier" src="./img/portfolio/photo-3.jpg" alt="работа №3" class="portfolio__card">
+        <img data-category="public-exterier" src="./img/portfolio/photo-4.jpg" alt="работа №4" class="portfolio__card">
+        <img data-category="exterier" src="./img/portfolio/photo-5.jpg" alt="работа №5" class="portfolio__card">
+        <img data-category="home-interier" src="./img/portfolio/photo-6.jpg" alt="работа №6" class="portfolio__card">
       </div>
       <!-- /.portfolio__wrap -->
     </div>
@@ -447,7 +447,7 @@
     <!-- /.process__title title -->
     <div class="container">
       <div class="process-block info-block">
-        <img src="./img/process/process-1.png" alt="шаг 1" class="process-block__img info-block__img">
+        <img src="./img/process/process-1.jpg" alt="шаг 1" class="process-block__img info-block__img">
 
         <div class="process-block__text info-block__text">
           Заполнение брифа
@@ -456,20 +456,20 @@
       </div>
       <!-- /.process-block info-block -->
       <div class="process-block info-block info-block_reverse">
-        <img src="./img/process/process-2.png" alt="шаг 2" class="process-block__img info-block__img">
+        <img src="./img/process/process-2.jpg" alt="шаг 2" class="process-block__img info-block__img">
 
         <div class="process-block__text info-block__text">Исследование</div>
         <!-- /.process-block__text info-block__text -->
       </div>
       <!-- /.process-block info-block -->
       <div class="process-block info-block">
-        <img src="./img/process/process-3.png" alt="шаг 3" class="process-block__img info-block__img">
+        <img src="./img/process/process-3.jpg" alt="шаг 3" class="process-block__img info-block__img">
         <div class="process-block__text info-block__text">Идея</div>
         <!-- /.process-block__text info-block__text -->
       </div>
       <!-- /.process-block info-block -->
       <div class="process-block info-block info-block_reverse">
-        <img src="./img/process/process-4.png" alt="шаг 4" class="process-block__img info-block__img">
+        <img src="./img/process/process-4.jpg" alt="шаг 4" class="process-block__img info-block__img">
         <div class="process-block__text info-block__text">Завершение</div>
         <!-- /.process-block__text info-block__text -->
       </div>
@@ -520,8 +520,8 @@
     <div class="container">
       <div class="team__wrap">
         <div class="team__person">
-          <img src="./img/team/pupil-1.png" alt="Ирина Притыкина" class="team__person-img">
-          <div class="team__person-name">Ирина Притыкина</div>
+          <img src="./img/team/pupil-1.jpg" alt="Ирина Притыкина" class="team__person-img">
+          <div class="team__person-name">Илья Кондрашин</div>
           <!-- /.team__person-name -->
           <div class="team__person-specialty">Директор компании</div>
           <!-- /.team__person-specialty -->
@@ -529,7 +529,7 @@
         <!-- /.team__person -->
         
         <div class="team__person">
-          <img src="./img/team/pupil-2.png" alt="Игорь Карий" class="team__person-img">
+          <img src="./img/team/pupil-2.jpg" alt="Игорь Карий" class="team__person-img">
           <div class="team__person-name">Игорь Карий</div>
           <!-- /.team__person-name -->
           <div class="team__person-specialty">Финансовый директор</div>
@@ -538,8 +538,8 @@
         <!-- /.team__person -->
         
         <div class="team__person">
-          <img src="./img/team/pupil-3.png" alt="Илья Кондрашин" class="team__person-img">
-          <div class="team__person-name">Илья Кондрашин</div>
+          <img src="./img/team/pupil-3.jpg" alt="Илья Кондрашин" class="team__person-img">
+          <div class="team__person-name">Ирина Притыкина</div>
           <!-- /.team__person-name -->
           <div class="team__person-specialty">Инженер модельер</div>
           <!-- /.team__person-specialty -->
@@ -547,8 +547,8 @@
         <!-- /.team__person -->
         
         <div class="team__person">
-          <img src="./img/team/pupil-4.png" alt="Маргарита Гордеева" class="team__person-img">
-          <div class="team__person-name">Маргарита Гордеева</div>
+          <img src="./img/team/pupil-4.jpg" alt="Маргарита Гордеева" class="team__person-img">
+          <div class="team__person-name">Самсонов Илья</div>
           <!-- /.team__person-name -->
           <div class="team__person-specialty">3D дизайнер</div>
           <!-- /.team__person-specialty -->
@@ -556,7 +556,7 @@
         <!-- /.team__person -->
         
         <div class="team__person">
-          <img src="./img/team/pupil-5.png" alt="Светлана Коток" class="team__person-img">
+          <img src="./img/team/pupil-5.jpg" alt="Светлана Коток" class="team__person-img">
           <div class="team__person-name">Светлана Коток</div>
           <!-- /.team__person-name -->
           <div class="team__person-specialty">Дизайнер интерьеров</div>
@@ -565,8 +565,8 @@
         <!-- /.team__person -->
         
         <div class="team__person">
-          <img src="./img/team/pupil-6.png" alt="Максим Ковальский" class="team__person-img">
-          <div class="team__person-name">Максим Ковальский</div>
+          <img src="./img/team/pupil-6.jpg" alt="Максим Ковальский" class="team__person-img">
+          <div class="team__person-name">Васильева Яна</div>
           <!-- /.team__person-name -->
           <div class="team__person-specialty">Дизайнер ландшафтов</div>
           <!-- /.team__person-specialty -->
@@ -582,7 +582,7 @@
         </div>
         <!-- /.quote__text -->
         <cite class="quote__author">
-          <span class="quote__author-name">Ислам Куаныш</span> 
+          <span class="quote__author-name">Илья Кондрашин</span> 
           <span class="quote__author-specialty">Директор</span> 
         </cite>
         <!-- /.quote__author -->
@@ -599,7 +599,7 @@
 
     <div class="blog__wrap container">
       <div class="blog-post">
-        <img src="./img/blog/post-1.png" alt="Спальня" class="blog-post__img">
+        <img src="./img/blog/post-1.jpg" alt="Спальня" class="blog-post__img">
         <a href="#" class="blog-post__link info-block__text">
           Минимализм – это самый простой, практичный и «спорный» стиль в дизайне интерьеров
         </a> 
@@ -608,7 +608,7 @@
       <!-- /.blog-post -->
 
       <div class="blog-post">
-        <img src="./img/blog/post-2.png" alt="Гостинная" class="blog-post__img">
+        <img src="./img/blog/post-2.jpg" alt="Гостинная" class="blog-post__img">
         <a href="#" class="blog-post__link info-block__text">
           Прованс - это спокойный южный регион Франции, с великолепнейшей природой
         </a> 
@@ -704,46 +704,52 @@
   </section>
   <!-- /.contacts -->
 
-  <section id="map" class="map"></section>
+  <div id="map" class="map"></div>
   <!-- /.map -->
 
   <footer class="footer">
     <div class="footer__wrap container">
       <ul class="footer__menu">
-        <div class="footer__menu-block">
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">Главная</a> <!-- /.footer__menu-link -->
-          </li>
-          <!-- /.footer__menu-item -->
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">Тарифы</a> <!-- /.footer__menu-link -->
-          </li>
-          <!-- /.footer__menu-item -->
-        </div>
-        <!-- /.footer__menu-block -->
-        
-        <div class="footer__menu-block">
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">Вопросы-ответы</a> <!-- /.footer__menu-link -->
-          </li>
-          <!-- /.footer__menu-item -->
+        <li class="footer__menu-block">
+          <ul>
             <li class="footer__menu-item">
-              <a href="" class="footer__menu-link">Личный кабинет</a> <!-- /.footer__menu-link -->
+              <a href="#" class="footer__menu-link">Главная</a> <!-- /.footer__menu-link -->
             </li>
             <!-- /.footer__menu-item -->
-        </div>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Тарифы</a> <!-- /.footer__menu-link -->
+            </li>
+            <!-- /.footer__menu-item -->
+          </ul>
+        </li>
         <!-- /.footer__menu-block -->
         
-        <div class="footer__menu-block">
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">Новости</a> <!-- /.footer__menu-link -->
-          </li>
-          <!-- /.footer__menu-item -->
-          <li class="footer__menu-item">
-            <a href="" class="footer__menu-link">Договор публичной оферты</a> <!-- /.footer__menu-link -->
-          </li>
-          <!-- /.footer__menu-item -->
-        </div>
+        <li class="footer__menu-block">
+          <ul>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Вопросы-ответы</a> <!-- /.footer__menu-link -->
+            </li>
+            <!-- /.footer__menu-item -->
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Личный кабинет</a> <!-- /.footer__menu-link -->
+            </li>
+            <!-- /.footer__menu-item -->
+          </ul>
+        </li>
+        <!-- /.footer__menu-block -->
+        
+        <li class="footer__menu-block">
+          <ul>
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Новости</a> <!-- /.footer__menu-link -->
+            </li>
+            <!-- /.footer__menu-item -->
+            <li class="footer__menu-item">
+              <a href="#" class="footer__menu-link">Договор публичной оферты</a> <!-- /.footer__menu-link -->
+            </li>
+            <!-- /.footer__menu-item -->
+          </ul>
+        </li>
         <!-- /.footer__menu-block -->
       </ul>
       <!-- /.footer__menu -->
@@ -817,6 +823,39 @@
   </section>
   <!-- /.popup popup-thanks -->
 
+  <script>
+    setTimeout(() => {
+      let elem = document.createElement('script');
+      elem.src =
+        'https://api-maps.yandex.ru/2.1/?apikey=22ecd435-25c5-4482-abf3-fd1a0dade7be&lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+    function getYaMap() {
+      var myMap = new ymaps.Map(map, {
+        center: [43.23, 76.95],
+        zoom: 15
+      });
+
+      var myGeoObject = new ymaps.GeoObject({
+        geometry: {
+        type: "Point", // тип геометрии - точка
+        coordinates: [43.23, 76.95]
+        },
+        properties: {
+        iconCaption: 'Алматы'
+        }
+        }, {
+        preset: 'islands#blueCircleDotIconWithCaption',
+        iconCaptionMaxWidth: '50'
+      });
+
+      myMap.geoObjects.add(myGeoObject);
+
+      myMap.behaviors.disable('scrollZoom');
+      myMap.behaviors.disable(['drag']);
+    }
+  </script>
   <script src="js/script.js"></script>
   <script src="js/maskPhone.js"></script>
   <script>
